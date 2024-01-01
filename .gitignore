@@ -1,0 +1,13 @@
+# Ignore SQLite database file(s)
+*.db
+
+# Ignore MariaDB/MySQL specific files
+*.frm
+*.MYD
+*.MYI
+*.ibd
+
+# Ignore any temporary or cache files
+*.sqlite-journal
+*.sqlite-shm
+*.sqlite-wal
