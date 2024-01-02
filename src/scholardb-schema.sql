@@ -86,6 +86,16 @@ CREATE TABLE Submission (
 	FOREIGN KEY (enrollment_id) REFERENCES Enrollment(enrollment_id)
 );
 
+-- Create UserCourseEnrollment table
+CREATE TABLE UserCourseEnrollment (
+	user_id INT,
+	course_id INT,
+	enrollment_date DATE,
+	PRIMARY KEY (user_id, course_id),
+	FOREIGN KEY (user_id) REFERENCES User(user_id),
+	FOREIGN KEY (course_id) REFERENCES Course(course_id)
+);
+
 -- Insert sample data into User-related tables
 INSERT INTO User VALUES (1, 'john_doe', 'password123', 'john@example.com', '2023-01-01', '2023-01-10');
 INSERT INTO User VALUES (2, 'jane_smith', 'hello456', 'jane@example.com', '2023-02-15', '2023-02-20');
@@ -118,3 +128,7 @@ INSERT INTO Grade VALUES (2, 2, 85, 'Well done.');
 
 INSERT INTO Submission VALUES (1, 1, '2023-04-15', 'Submitted code for the assignment.');
 INSERT INTO Submission VALUES (2, 2, '2023-05-20', 'Submitted database design project.');
+
+-- Insert sample data into UserCourseEnrollment table
+INSERT INTO UserCourseEnrollment VALUES (1, 1, '2023-03-05');
+INSERT INTO UserCourseEnrollment VALUES (2, 2, '2023-03-10');
