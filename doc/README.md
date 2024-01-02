@@ -15,6 +15,7 @@
 1. **Enrollment:** Tracks user enrollments in courses, including enrollment date and enrollment status (e.g., enrolled, completed).
 2. **Grade:** Records grades associated with enrollments, linking enrollments to grade values and any feedback provided.
 3. **Submission:** Stores submissions made by users, tied to their enrollments, submission date, and submitted content.
+4. **UserCourseEnrollment:** Represents the many-to-many relationship between users and courses for enrollment purposes, storing enrollment dates.
 
 # Relationships:
 
@@ -32,3 +33,4 @@
 - **Course - Enrollment:** Another one-to-many relationship between courses and enrollments, enabling multiple enrollments in a course.
 - **Enrollment - Grade:** A one-to-many relationship, associating multiple grades with an enrollment.
 - **Enrollment - Submission:** A one-to-many relationship allowing multiple submissions linked to an enrollment.
+- **User - UserCourseEnrollment:** A many-to-many relationship representing enrollments of users in multiple courses and vice versa.
