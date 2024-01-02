@@ -88,6 +88,13 @@ entity Submission {
     ...
 }
 
+entity UserCourseEnrollment {
+    + user_id: int (PK, FK User.user_id)
+    + course_id: int (PK, FK Course.course_id)
+    enrollment_date: date
+    ...
+}
+
 ' Define Relationships with Cardinality
 User --|{ UserProfile : 1 user_id - 1 profile_id
 User }|--|{ UserRole : 1 user_id - * user_role_id
@@ -98,5 +105,7 @@ User }|--{ Enrollment : 1 user_id - * enrollment_id
 Course }|--{ Enrollment : 1 course_id - * enrollment_id
 Enrollment }|--{ Grade : 1 enrollment_id - * grade_id
 Enrollment }|--{ Submission : 1 enrollment_id - * submission_id
+User }|--{ UserCourseEnrollment : * user_id - * course_id
+Course }|--{ UserCourseEnrollment : * course_id - * user_id
 
 @enduml
