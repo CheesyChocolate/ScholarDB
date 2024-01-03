@@ -5,7 +5,27 @@ ScholarDB is an educational database system designed to manage student enrollmen
 
 The database is designed to be used fully compatible with SQLite and MySQL.
 
-## MySQL
+## Using script
+
+move to the directory where the sql files are located and run the following command:
+
+for Unix:
+
+```bash
+python ../scripts/makedb.py
+```
+
+for Windows:
+
+```bash
+python ..\scripts\makedb.py
+```
+
+Then follow the instructions.
+
+## Manual
+
+### MySQL
 
 The sql file `scholardb-schema.sql` contains the database schema and sample data. To create the database, run the following command:
 
@@ -31,7 +51,7 @@ or in MySQL:
 source scholardb-data.sql
 ```
 
-## SQLite
+### SQLite
 
 To use foreign key constraints in SQLite, run the following command:
 
