@@ -15,15 +15,15 @@ CREATE TABLE UserProfile (
 	date_of_birth DATE,
 	gender VARCHAR(10),
 	country VARCHAR(50),
-	FOREIGN KEY (user_id) REFERENCES User(user_id)
+	FOREIGN KEY (user_id) REFERENCES User(user_id) ON DELETE SET NULL
 );
 
 CREATE TABLE UserRole (
 	user_role_id INT PRIMARY KEY,
 	user_id INT,
 	role_id INT,
-	FOREIGN KEY (user_id) REFERENCES User(user_id),
-	FOREIGN KEY (role_id) REFERENCES Role(role_id)
+	FOREIGN KEY (user_id) REFERENCES User(user_id) ON DELETE CASCADE,
+	FOREIGN KEY (role_id) REFERENCES Role(role_id) ON DELETE CASCADE
 );
 
 CREATE TABLE Role (
@@ -48,7 +48,7 @@ CREATE TABLE CourseModule (
 	module_name VARCHAR(100),
 	module_type VARCHAR(50),
 	module_description TEXT,
-	FOREIGN KEY (course_id) REFERENCES Course(course_id)
+	FOREIGN KEY (course_id) REFERENCES Course(course_id) ON DELETE CASCADE
 );
 
 CREATE TABLE ModuleContent (
@@ -56,7 +56,7 @@ CREATE TABLE ModuleContent (
 	module_id INT,
 	content_type VARCHAR(50),
 	content_data TEXT,
-	FOREIGN KEY (module_id) REFERENCES CourseModule(module_id)
+	FOREIGN KEY (module_id) REFERENCES CourseModule(module_id) ON DELETE CASCADE
 );
 
 -- Create Enrollment, Grade, and Submission tables
@@ -66,8 +66,8 @@ CREATE TABLE Enrollment (
 	course_id INT,
 	enrollment_date DATE,
 	enrollment_status VARCHAR(20),
-	FOREIGN KEY (user_id) REFERENCES User(user_id),
-	FOREIGN KEY (course_id) REFERENCES Course(course_id)
+	FOREIGN KEY (user_id) REFERENCES User(user_id) ON DELETE SET NULL,
+	FOREIGN KEY (course_id) REFERENCES Course(course_id) ON DELETE CASCADE
 );
 
 CREATE TABLE Grade (
@@ -75,7 +75,7 @@ CREATE TABLE Grade (
 	enrollment_id INT,
 	grade_value FLOAT,
 	feedback TEXT,
-	FOREIGN KEY (enrollment_id) REFERENCES Enrollment(enrollment_id)
+	FOREIGN KEY (enrollment_id) REFERENCES Enrollment(enrollment_id) ON DELETE CASCADE
 );
 
 CREATE TABLE Submission (
@@ -83,7 +83,7 @@ CREATE TABLE Submission (
 	enrollment_id INT,
 	submission_date DATE,
 	submitted_content TEXT,
-	FOREIGN KEY (enrollment_id) REFERENCES Enrollment(enrollment_id)
+	FOREIGN KEY (enrollment_id) REFERENCES Enrollment(enrollment_id) ON DELETE CASCADE
 );
 
 -- Create UserCourseEnrollment table
@@ -92,9 +92,10 @@ CREATE TABLE UserCourseEnrollment (
 	course_id INT,
 	enrollment_date DATE,
 	PRIMARY KEY (user_id, course_id),
-	FOREIGN KEY (user_id) REFERENCES User(user_id),
-	FOREIGN KEY (course_id) REFERENCES Course(course_id)
+	FOREIGN KEY (user_id) REFERENCES User(user_id) ON DELETE SET NULL,
+	FOREIGN KEY (course_id) REFERENCES Course(course_id) ON DELETE CASCADE
 );
+
 
 -- Insert sample data into User-related tables
 INSERT INTO User VALUES (1, 'john_doe', 'password123', 'john@example.com', '2023-01-01', '2023-01-10');

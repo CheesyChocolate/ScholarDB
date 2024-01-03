@@ -6,7 +6,7 @@ ScholarDB is an educational database system designed to manage student enrollmen
 ## Database Schema (20 Points)
 - [x] Create 5-7 entities with 1:1, 1:M, and M:N relationships.
 - [x] Define primary keys for each table.
-- [ ] Implement foreign keys using ON DELETE SET NULL and ON DELETE CASCADE.
+- [x] Implement foreign keys using ON DELETE SET NULL and ON DELETE CASCADE.
 - [ ] Populate each table with at least 20 tuples.
 
 ## Simple Queries (35 Points)
