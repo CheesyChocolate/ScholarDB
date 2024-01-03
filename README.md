@@ -1,6 +1,68 @@
 # ScholarDB
 ScholarDB is an educational database system designed to manage student enrollments, course materials, grades, and submissions within a learning management environment. It facilitates efficient data handling for educational institutions or platforms, promoting seamless management of academic resources and student interactions.
 
+# Usage
+
+The database is designed to be used fully compatible with SQLite and MySQL.
+
+## MySQL
+
+The sql file `scholardb-schema.sql` contains the database schema and sample data. To create the database, run the following command:
+
+```bash
+mysql -u root -p < scholardb-schema.sql
+```
+
+or in MySQL:
+
+```sql
+source scholardb-schema.sql
+```
+
+The sql file `scholardb-data.sql` contains sample data. To populate the database, run the following command:
+
+```bash
+mysql -u root -p < scholardb-data.sql
+```
+
+or in MySQL:
+
+```sql
+source scholardb-data.sql
+```
+
+## SQLite
+
+To use foreign key constraints in SQLite, run the following command:
+
+```sql
+PRAGMA foreign_keys = ON;
+```
+
+- The sql file `scholardb-schema.sql` contains the database schema and sample data. To create the database, run the following command:
+
+```bash
+sqlite3 scholardb.db < scholardb-schema.sql
+```
+
+or in SQLite:
+
+```sql
+.read scholardb-schema.sql
+```
+
+- The sql file `scholardb-data.sql` contains sample data. To populate the database, run the following command:
+
+```bash
+sqlite3 scholardb.db < scholardb-data.sql
+```
+
+or in SQLite:
+
+```sql
+.read scholardb-data.sql
+```
+
 # Project Details
 
 ## Database Schema (20 Points)
