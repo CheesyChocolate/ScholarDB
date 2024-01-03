@@ -17,7 +17,7 @@ import mysql.connector
 
 def create_sqlite_database():
     try:
-        conn = sqlite3.connect('scholardb.sqlite')
+        conn = sqlite3.connect('scholardb.db')
         cursor = conn.cursor()
 
         with open('scholardb-schema.sql', 'r') as schema_file:
