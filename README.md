@@ -89,7 +89,7 @@ or in SQLite:
 - [x] Create 5-7 entities with 1:1, 1:M, and M:N relationships.
 - [x] Define primary keys for each table.
 - [x] Implement foreign keys using ON DELETE SET NULL and ON DELETE CASCADE.
-- [ ] Populate each table with at least 20 tuples.
+- [x] Populate each table with at least 20 tuples.
 
 ## Simple Queries (35 Points)
 - [ ] Insert 3 tuples into different tables.
