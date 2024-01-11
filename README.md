@@ -92,8 +92,8 @@ or in SQLite:
 - [x] Populate each table with at least 20 tuples.
 
 ## Simple Queries (35 Points)
-- [ ] Insert 3 tuples into different tables.
-- [ ] Insert 5 tuples into the same table.
+- [x] Insert 3 tuples into different tables.
+- [x] Insert 5 tuples into the same table.
 - [ ] Update 3 tuples in different tables.
 - [ ] Delete 3 tuples in different tables.
 - [ ] Add CHECK constraint.
