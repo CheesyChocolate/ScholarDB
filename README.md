@@ -116,13 +116,13 @@ or in SQLite:
 - [x] Create 3 queries using HAVING clause.
 
 ## Advanced Queries (35 Points)
-- [ ] Create a query using LEFT JOIN.
-- [ ] Create a query using RIGHT JOIN.
-- [ ] Create 3 queries joining 2 tables.
-- [ ] Create 3 queries joining 3 tables.
-- [ ] Create 3 queries with subqueries in WHERE clause.
-- [ ] Create 3 queries with subqueries in SELECT columns.
-- [ ] Copy one table's structure and data to a new table.
-- [ ] Create a VIEW.
-- [ ] Create a stored procedure and call it.
+- [x] Create a query using LEFT JOIN.
+- [x] Create a query using RIGHT JOIN.
+- [x] Create 3 queries joining 2 tables.
+- [x] Create 3 queries joining 3 tables.
+- [x] Create 3 queries with subqueries in WHERE clause.
+- [x] Create 3 queries with subqueries in SELECT columns.
+- [x] Copy one table's structure and data to a new table.
+- [x] Create a VIEW.
+- [x] Create a stored procedure and call it.
 - [ ] Create 3 triggers and provide examples for their execution.
