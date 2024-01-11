@@ -8,14 +8,10 @@ CREATE TABLE User (
 	last_login_date DATE
 );
 
-CREATE TABLE UserProfile (
-	profile_id INT PRIMARY KEY,
-	user_id INT,
-	full_name VARCHAR(100),
-	date_of_birth DATE,
-	gender VARCHAR(10),
-	country VARCHAR(50),
-	FOREIGN KEY (user_id) REFERENCES User(user_id) ON DELETE SET NULL
+CREATE TABLE Role (
+	role_id INT PRIMARY KEY,
+	role_name VARCHAR(50),
+	description VARCHAR(255)
 );
 
 CREATE TABLE UserRole (
@@ -26,10 +22,14 @@ CREATE TABLE UserRole (
 	FOREIGN KEY (role_id) REFERENCES Role(role_id) ON DELETE CASCADE
 );
 
-CREATE TABLE Role (
-	role_id INT PRIMARY KEY,
-	role_name VARCHAR(50),
-	description VARCHAR(255)
+CREATE TABLE UserProfile (
+	profile_id INT PRIMARY KEY,
+	user_id INT,
+	full_name VARCHAR(100),
+	date_of_birth DATE,
+	gender VARCHAR(10),
+	country VARCHAR(50),
+	FOREIGN KEY (user_id) REFERENCES User(user_id) ON DELETE SET NULL
 );
 
 -- Create Course-related tables
