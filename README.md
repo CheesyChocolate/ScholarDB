@@ -111,9 +111,9 @@ or in SQLite:
 - [x] Use ROLLUP.
 
 ## Queries by Grouping (10 Points)
-- [ ] Create 3 queries using GROUP BY clause.
-- [ ] Create 3 queries using aggregate functions (COUNT, MIN, MAX, SUM, AVG).
-- [ ] Create 3 queries using HAVING clause.
+- [x] Create 3 queries using GROUP BY clause.
+- [x] Create 3 queries using aggregate functions (COUNT, MIN, MAX, SUM, AVG).
+- [x] Create 3 queries using HAVING clause.
 
 ## Advanced Queries (35 Points)
 - [ ] Create a query using LEFT JOIN.
