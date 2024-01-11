@@ -94,21 +94,21 @@ or in SQLite:
 ## Simple Queries (35 Points)
 - [x] Insert 3 tuples into different tables.
 - [x] Insert 5 tuples into the same table.
-- [ ] Update 3 tuples in different tables.
-- [ ] Delete 3 tuples in different tables.
+- [x] Update 3 tuples in different tables.
+- [x] Delete 3 tuples in different tables.
 - [ ] Add CHECK constraint.
-- [ ] Create 3 queries using WHERE clause and comparison operators.
-- [ ] Create 3 queries using WHERE clause and arithmetic operators.
-- [ ] Create 3 queries using WHERE clause and logical operators.
-- [ ] Create 3 queries using special operators (BETWEEN, IS NULL, LIKE, IN, EXISTS).
-- [ ] Create 3 queries using ORDER BY clause.
-- [ ] Create 3 queries using DISTINCT clause.
-- [ ] Create 3 queries using String Functions.
-- [ ] Create 3 queries using Numeric Functions.
-- [ ] Create 3 queries using Date Functions.
-- [ ] Create 3 queries using aggregate functions (COUNT, MIN, MAX, SUM, AVG).
-- [ ] Use LIMIT clause.
-- [ ] Use ROLLUP.
+- [x] Create 3 queries using WHERE clause and comparison operators.
+- [x] Create 3 queries using WHERE clause and arithmetic operators.
+- [x] Create 3 queries using WHERE clause and logical operators.
+- [x] Create 3 queries using special operators (BETWEEN, IS NULL, LIKE, IN, EXISTS).
+- [x] Create 3 queries using ORDER BY clause.
+- [x] Create 3 queries using DISTINCT clause.
+- [x] Create 3 queries using String Functions.
+- [x] Create 3 queries using Numeric Functions.
+- [x] Create 3 queries using Date Functions.
+- [x] Create 3 queries using aggregate functions (COUNT, MIN, MAX, SUM, AVG).
+- [x] Use LIMIT clause.
+- [x] Use ROLLUP.
 
 ## Queries by Grouping (10 Points)
 - [ ] Create 3 queries using GROUP BY clause.
