@@ -8,6 +8,7 @@ SELECT course_id, COUNT(DISTINCT user_id) AS total_enrolled_users
 FROM Enrollment
 GROUP BY course_id;
 
--- Query 3: Select users with a calculated age from the UserProfile table
-SELECT user_id, strftime('%Y', 'now') - strftime('%Y', date_of_birth) AS user_age
-FROM UserProfile;
+-- Query 3: Select the highest grade value for each user from the Grade table
+SELECT user_id, MAX(grade_value) AS highest_grade
+FROM Grade
+GROUP BY user_id;
