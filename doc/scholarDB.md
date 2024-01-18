@@ -438,10 +438,11 @@ SELECT * FROM Submission;
 SELECT * FROM UserCourseEnrollment;
 ```
 
+---
+
 ## Insert 3 tuples into different tables.
 
 ```sql
-```
 -- Inserting a tuple into the User table
 INSERT INTO User VALUES (21, 'alice_smith', 'pass789', 'alice@example.com', '2023-03-01', '2023-03-10');
 
@@ -450,6 +451,8 @@ INSERT INTO Course VALUES (21, 'Web Development', 'Introduction to web developme
 
 -- Inserting a tuple into the Grade table
 INSERT INTO Grade VALUES (21, 1, 88, 'Great job on the assignment!');
+```
+
 ---
 
 ## Insert 5 tuples into the same table.
