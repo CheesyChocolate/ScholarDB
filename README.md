@@ -96,7 +96,7 @@ or in SQLite:
 - [x] Insert 5 tuples into the same table.
 - [x] Update 3 tuples in different tables.
 - [x] Delete 3 tuples in different tables.
-- [ ] Add CHECK constraint.
+- [x] Add CHECK constraint.
 - [x] Create 3 queries using WHERE clause and comparison operators.
 - [x] Create 3 queries using WHERE clause and arithmetic operators.
 - [x] Create 3 queries using WHERE clause and logical operators.
