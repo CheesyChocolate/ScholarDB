@@ -3,11 +3,20 @@ SELECT u.user_id, u.username, e.enrollment_id, e.course_id
 FROM User u
 JOIN Enrollment e ON u.user_id = e.user_id;
 
--- Query 2: Find users and their corresponding roles
-SELECT u.user_id, u.username, r.role_name
+-- Query 2: Combining relevant data from both tables.
+SELECT 
+    u.user_id, 
+    u.username, 
+    u.email, 
+    u.registration_date, 
+    u.last_login_date, 
+    up.full_name, 
+    up.date_of_birth, 
+    up.gender, 
+    up.country
 FROM User u
-JOIN UserRole ur ON u.user_id = ur.user_id
-JOIN Role r ON ur.role_id = r.role_id;
+JOIN UserProfile up ON u.user_id = up.user_id;
+
 
 -- Query 3: Get course details along with the associated modules
 SELECT c.course_id, c.course_name, m.module_id, m.module_name
