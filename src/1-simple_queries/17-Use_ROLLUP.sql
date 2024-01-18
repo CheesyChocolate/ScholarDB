@@ -1,21 +1,22 @@
--- No ROLLUP in SQLite
+-- No ROLLUP in SQLite, HOWEVER, we have MySQL!!!!
 -- Query: Calculate total enrollment count by course and user with ROLLUP
--- SELECT course_id, user_id, COUNT(*) AS enrollment_count
--- FROM Enrollment
--- GROUP BY ROLLUP(course_id, user_id);
-
--- Query: Calculate total enrollment count by course and user with simulated ROLLUP
 SELECT course_id, user_id, COUNT(*) AS enrollment_count
 FROM Enrollment
-GROUP BY course_id, user_id
+GROUP BY course_id, user_id WITH ROLLUP;
 
-UNION
+-- FOR THE SQLite PEASANTS!
+-- -- Query: Calculate total enrollment count by course and user with simulated ROLLUP
+-- SELECT course_id, user_id, COUNT(*) AS enrollment_count
+-- FROM Enrollment
+-- GROUP BY course_id, user_id
 
-SELECT course_id, NULL AS user_id, COUNT(*) AS enrollment_count
-FROM Enrollment
-GROUP BY course_id
+-- UNION
 
-UNION
+-- SELECT course_id, NULL AS user_id, COUNT(*) AS enrollment_count
+-- FROM Enrollment
+-- GROUP BY course_id
 
-SELECT NULL AS course_id, NULL AS user_id, COUNT(*) AS enrollment_count
-FROM Enrollment;
+-- UNION
+
+-- SELECT NULL AS course_id, NULL AS user_id, COUNT(*) AS enrollment_count
+-- FROM Enrollment;
