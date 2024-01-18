@@ -125,4 +125,4 @@ or in SQLite:
 - [x] Copy one table's structure and data to a new table.
 - [x] Create a VIEW.
 - [x] Create a stored procedure and call it.
-- [ ] Create 3 triggers and provide examples for their execution.
+- [x] Create 3 triggers and provide examples for their execution.
