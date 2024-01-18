@@ -42,28 +42,6 @@ INSERT INTO UserProfile VALUES (18, 18, 'Liam Harris', '1993-02-12', 'Male', 'Ca
 INSERT INTO UserProfile VALUES (19, 19, 'Harper Turner', '1991-08-24', 'Female', 'Canada');
 INSERT INTO UserProfile VALUES (20, 20, 'Mason Adams', '1990-05-12', 'Male', 'USA');
 
--- Sample data for the UserRole table
-INSERT INTO UserRole VALUES (1, 1, 1);
-INSERT INTO UserRole VALUES (2, 2, 2);
-INSERT INTO UserRole VALUES (3, 3, 1);
-INSERT INTO UserRole VALUES (4, 4, 1);
-INSERT INTO UserRole VALUES (5, 5, 1);
-INSERT INTO UserRole VALUES (6, 6, 2);
-INSERT INTO UserRole VALUES (7, 7, 1);
-INSERT INTO UserRole VALUES (8, 8, 2);
-INSERT INTO UserRole VALUES (9, 9, 1);
-INSERT INTO UserRole VALUES (10, 10, 2);
-INSERT INTO UserRole VALUES (11, 11, 1);
-INSERT INTO UserRole VALUES (12, 12, 2);
-INSERT INTO UserRole VALUES (13, 13, 1);
-INSERT INTO UserRole VALUES (14, 14, 2);
-INSERT INTO UserRole VALUES (15, 15, 1);
-INSERT INTO UserRole VALUES (16, 16, 2);
-INSERT INTO UserRole VALUES (17, 17, 1);
-INSERT INTO UserRole VALUES (18, 18, 2);
-INSERT INTO UserRole VALUES (19, 19, 1);
-INSERT INTO UserRole VALUES (20, 20, 2);
-
 -- Sample data for the Role table
 INSERT INTO Role VALUES (1, 'Student', 'Role for students');
 INSERT INTO Role VALUES (2, 'Teacher', 'Role for teachers');
@@ -85,6 +63,28 @@ INSERT INTO Role VALUES (17, 'Sales', 'Role for sales');
 INSERT INTO Role VALUES (18, 'Marketing', 'Role for marketing');
 INSERT INTO Role VALUES (19, 'Intern', 'Role for interns');
 INSERT INTO Role VALUES (20, 'Advisor', 'Role for advisors');
+
+-- Sample data for the UserRole table
+INSERT INTO UserRole VALUES (1, 1, 1);
+INSERT INTO UserRole VALUES (2, 2, 2);
+INSERT INTO UserRole VALUES (3, 3, 1);
+INSERT INTO UserRole VALUES (4, 4, 1);
+INSERT INTO UserRole VALUES (5, 5, 1);
+INSERT INTO UserRole VALUES (6, 6, 2);
+INSERT INTO UserRole VALUES (7, 7, 1);
+INSERT INTO UserRole VALUES (8, 8, 2);
+INSERT INTO UserRole VALUES (9, 9, 1);
+INSERT INTO UserRole VALUES (10, 10, 2);
+INSERT INTO UserRole VALUES (11, 11, 1);
+INSERT INTO UserRole VALUES (12, 12, 2);
+INSERT INTO UserRole VALUES (13, 13, 1);
+INSERT INTO UserRole VALUES (14, 14, 2);
+INSERT INTO UserRole VALUES (15, 15, 1);
+INSERT INTO UserRole VALUES (16, 16, 2);
+INSERT INTO UserRole VALUES (17, 17, 1);
+INSERT INTO UserRole VALUES (18, 18, 2);
+INSERT INTO UserRole VALUES (19, 19, 1);
+INSERT INTO UserRole VALUES (20, 20, 2);
 
 -- Sample data for the Course table
 INSERT INTO Course VALUES (1, 'Introduction to Programming', 'Basic programming concepts', '2023-03-01', '2023-04-30', 'abc123');
