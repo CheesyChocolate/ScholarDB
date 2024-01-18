@@ -20,9 +20,8 @@ def create_sqlite_database():
         conn = sqlite3.connect('scholardb.db')
         cursor = conn.cursor()
 
-        # TODO: fix sqlite3.IntegrityError: FOREIGN KEY constraint failed
         # Enable foreign key constraints
-        # cursor.execute("PRAGMA foreign_keys = ON")
+        cursor.execute("PRAGMA foreign_keys = ON")
 
         with open('scholardb-schema.sql', 'r') as schema_file:
             schema_script = schema_file.read()
