@@ -8,7 +8,6 @@ SELECT course_id, COUNT(DISTINCT user_id) AS total_enrolled_users
 FROM Enrollment
 GROUP BY course_id;
 
--- Query 3: Select the highest grade value for each user from the Grade table
-SELECT user_id, MAX(grade_value) AS highest_grade
-FROM Grade
-GROUP BY user_id;
+-- Query 3: This will find the earliest (oldest) date_of_birth among all users in the UserProfile table.
+SELECT MAX(date_of_birth) AS oldest_birth_date
+FROM UserProfile;
