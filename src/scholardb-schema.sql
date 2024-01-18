@@ -92,6 +92,6 @@ CREATE TABLE UserCourseEnrollment (
 	course_id INT,
 	enrollment_date DATE,
 	PRIMARY KEY (user_id, course_id),
-	FOREIGN KEY (user_id) REFERENCES User(user_id) ON DELETE SET NULL,
+	FOREIGN KEY (user_id) REFERENCES User(user_id) ON DELETE CASCADE,
 	FOREIGN KEY (course_id) REFERENCES Course(course_id) ON DELETE CASCADE
 );
