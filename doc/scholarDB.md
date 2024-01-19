@@ -12,6 +12,18 @@ documentclass: extarticle
 
 All the data for this project is also accessible on [GitHub](https://github.com/CheesyChocolate/ScholarDB).
 
+Most of the project Initialization is done by Behnam Lal Moghaddam and most of
+the debugging and adaptation for mySQL is done by Ali Daghighi.
+
+The project's objectives are done by both of us, in a manner that we can not
+say which objective is done by whom. Therefore, the person who is done the
+last change to the objective is mentioned as the author of that objective,
+yet all the objectives done in **collaboration**.
+
+To indicate the author of each objective, The name of the author is mentioned
+at the end of each objective's title. That is visible in the table of contents
+or in the title of each objective.
+
 ## schema
 
 ![schema](./schema.png)
@@ -53,7 +65,7 @@ All the data for this project is also accessible on [GitHub](https://github.com/
 
 # Database Schema (20 Points)
 
-## Create 5-7 entities with 1:1, 1:M, and M:N relationships.
+## Create 5-7 entities with 1:1, 1:M, and M:N relationships. -- Behnam Lal Moghaddam
 
 ```sql
 -- Create User-related tables
@@ -157,19 +169,19 @@ CREATE TABLE UserCourseEnrollment (
 
 ---
 
-## Define primary keys for each table.
+## Define primary keys for each table. -- Behnam Lal Moghaddam
 
 * done
 
 ---
 
-## Implement foreign keys using ON DELETE SET NULL and ON DELETE CASCADE.
+## Implement foreign keys using ON DELETE SET NULL and ON DELETE CASCADE. -- Behnam Lal Moghaddam
 
 * done
 
 ---
 
-## Populate each table with at least 20 tuples.
+## Populate each table with at least 20 tuples. -- Behnam Lal Moghaddam
 
 ```sql
 -- Sample data for the User table
@@ -421,7 +433,7 @@ INSERT INTO UserCourseEnrollment VALUES (20, 20, '2027-07-10');
 
 # Simple Queries (35 Points)
 
-## query all the tuples in all tables. (extra)
+## query all the tuples in all tables. (extra) -- Behnam Lal Moghaddam
 
 ```sql
 -- Query to retrieve data from all tables
@@ -440,7 +452,7 @@ SELECT * FROM UserCourseEnrollment;
 
 ---
 
-## Insert 3 tuples into different tables.
+## Insert 3 tuples into different tables. -- Behnam Lal Moghaddam
 
 ```sql
 -- Inserting a tuple into the User table
@@ -455,7 +467,7 @@ INSERT INTO Grade VALUES (21, 1, 88, 'Great job on the assignment!');
 
 ---
 
-## Insert 5 tuples into the same table.
+## Insert 5 tuples into the same table. -- Behnam Lal Moghaddam
 
 ```sql
 -- Inserting 5 tuples into the User table
@@ -469,7 +481,7 @@ INSERT INTO User VALUES
 
 ---
 
-## Update 3 tuples in different tables.
+## Update 3 tuples in different tables. -- Behnam Lal Moghaddam
 
 ```sql
 -- Update a tuple in the User table
@@ -490,7 +502,7 @@ WHERE grade_id = 1;
 
 ---
 
-## Delete 3 tuples in different tables.
+## Delete 3 tuples in different tables. -- Behnam Lal Moghaddam
 
 ```sql
 -- Delete a tuple from the User table
@@ -508,7 +520,7 @@ WHERE grade_id = 1;
 
 ---
 
-## Add CHECK constraint.
+## Add CHECK constraint. -- Ali Daghighi
 
 ```sql
 -- does not work in SQLite
@@ -521,7 +533,7 @@ CHECK (grade_value >= 0 AND grade_value <= 100);
 
 ---
 
-## Create 3 queries using WHERE clause and comparison operators.
+## Create 3 queries using WHERE clause and comparison operators. -- Behnam Lal Moghaddam
 
 ```sql
 -- Query 1: Select users with registration dates after a specific date
@@ -542,7 +554,7 @@ WHERE submission_date BETWEEN '2023-04-01' AND '2023-04-30';
 
 ---
 
-## Create 3 queries using WHERE clause and arithmetic operators.
+## Create 3 queries using WHERE clause and arithmetic operators. -- Ali Daghighi
 
 ```sql
 -- Query 1: Select users with registration dates within the last 90 days
@@ -567,7 +579,7 @@ WHERE g.grade_value > (50 + 10); -- Select enrollments with grades greater than 
 
 ---
 
-## Create 3 queries using WHERE clause and logical operators.
+## Create 3 queries using WHERE clause and logical operators. -- Ali Daghighi
 
 ```sql
 -- Query 0: Select users who are either teachers or have a grade greater than 90
@@ -597,7 +609,7 @@ WHERE country = 'USA' AND gender = 'Female';
 
 ---
 
-## Create 3 queries using special operators (BETWEEN, IS NULL, LIKE, IN, EXISTS).
+## Create 3 queries using special operators (BETWEEN, IS NULL, LIKE, IN, EXISTS). -- Behnam Lal Moghaddam
 
 ```sql
 -- Query 1: Select users who registered between two specific dates using BETWEEN
@@ -618,7 +630,7 @@ WHERE submitted_content LIKE '%good%' OR submitted_content LIKE '%excellent%';
 
 ---
 
-## Create 3 queries using ORDER BY clause.
+## Create 3 queries using ORDER BY clause. -- Behnam Lal Moghaddam
 
 ```sql
 -- Query 1: Select users ordered by registration date in ascending order
@@ -639,7 +651,7 @@ ORDER BY enrollment_date ASC, user_id ASC;
 
 ---
 
-## Create 3 queries using DISTINCT clause.
+## Create 3 queries using DISTINCT clause. -- Behnam Lal Moghaddam
 
 ```sql
 -- Query 1: Select distinct roles from the UserRole table
@@ -657,7 +669,7 @@ FROM Course;
 
 ---
 
-## Create 3 queries using String Functions.
+## Create 3 queries using String Functions. -- Behnam Lal Moghaddam
 
 ```sql
 -- Query 1: Select usernames and their lengths from the User table
@@ -676,7 +688,7 @@ WHERE LOWER(email) LIKE '%.com';
 
 ---
 
-## Create 3 queries using Numeric Functions.
+## Create 3 queries using Numeric Functions. -- Ali Daghighi
 
 ```sql
 -- Query 1: Select the average grade value for each enrollment from the Grade table
@@ -696,7 +708,7 @@ FROM UserProfile;
 
 ---
 
-## Create 3 queries using Date Functions.
+## Create 3 queries using Date Functions. -- Ali Daghighi
 
 ```sql
 -- Query 1: Select users who registered in the last 30 days
@@ -718,7 +730,7 @@ WHERE (julianday('now') - julianday(enrollment_date)) > 60;
 
 ---
 
-## Create 3 queries using aggregate functions (COUNT, MIN, MAX, SUM, AVG).
+## Create 3 queries using aggregate functions (COUNT, MIN, MAX, SUM, AVG). -- Behnam Lal Moghaddam
 
 ```sql
 -- Query 1: Count the total number of enrollments for each course
@@ -750,7 +762,7 @@ FROM Submission;
 
 ---
 
-## Use LIMIT clause.
+## Use LIMIT clause. -- Ali Daghighi
 
 ```sql
 -- Query 1: Select the first 5 users ordered by registration date
@@ -776,7 +788,7 @@ LIMIT 10;
 
 ---
 
-## Use ROLLUP.
+## Use ROLLUP. -- Ali Daghighi
 
 ```sql
 -- No ROLLUP in SQLite, HOWEVER, we have MySQL!!!!
@@ -809,7 +821,7 @@ GROUP BY course_id, user_id WITH ROLLUP;
 
 # Queries by Grouping (10 Points)
 
-## Create 3 queries using GROUP BY clause.
+## Create 3 queries using GROUP BY clause. -- Behnam Lal Moghaddam
 
 ```sql
 -- Query 1: Count the number of enrollments for each course
@@ -833,7 +845,7 @@ GROUP BY cm.module_id;
 
 ---
 
-## Create 3 queries using aggregate functions (COUNT, MIN, MAX, SUM, AVG).
+## Create 3 queries using aggregate functions (COUNT, MIN, MAX, SUM, AVG). -- Behnam Lal Moghaddam
 
 ```sql
 -- Query 1: Count the number of enrollments for each course
@@ -858,7 +870,7 @@ FROM Submission;
 
 ---
 
-## Create 3 queries using HAVING clause.
+## Create 3 queries using HAVING clause. -- Behnam Lal Moghaddam
 
 ```sql
 -- Query 1: Find courses with more than 50 enrollments
@@ -888,7 +900,7 @@ HAVING average_content_length > 10;
 
 # Advanced Queries (35 Points)
 
-## Create a query using LEFT JOIN.
+## Create a query using LEFT JOIN. -- Behnam Lal Moghaddam
 
 ```sql
 -- Query: Retrieve all users and their enrollments (if any)
@@ -899,7 +911,7 @@ LEFT JOIN Enrollment e ON u.user_id = e.user_id;
 
 ---
 
-## Create a query using RIGHT JOIN.
+## Create a query using RIGHT JOIN. -- Behnam Lal Moghaddam
 
 ```sql
 -- Query: Retrieve all enrollments and their corresponding users (if any)
@@ -910,7 +922,7 @@ RIGHT JOIN User u ON e.user_id = u.user_id;
 
 ---
 
-## Create 3 queries joining 2 tables.
+## Create 3 queries joining 2 tables. -- Ali Daghighi
 
 ```sql
 -- Query 1: Retrieve information about users and their enrollments
@@ -941,7 +953,7 @@ JOIN CourseModule m ON c.course_id = m.course_id;
 
 ---
 
-## Create 3 queries joining 3 tables.
+## Create 3 queries joining 3 tables. -- Behnam Lal Moghaddam
 
 ```sql
 -- Query 1: Retrieve information about users, their enrollments, and associated courses
@@ -965,7 +977,7 @@ JOIN ModuleContent mc ON m.module_id = mc.module_id;
 
 ---
 
-## Create 3 queries with subqueries in WHERE clause.
+## Create 3 queries with subqueries in WHERE clause. -- Behnam Lal Moghaddam
 
 ```sql
 -- Query 1: Find users enrolled in a specific course
@@ -986,7 +998,7 @@ WHERE user_id IN (SELECT user_id FROM UserRole WHERE role_id = 1);
 
 ---
 
-## Create 3 queries with subqueries in SELECT columns.
+## Create 3 queries with subqueries in SELECT columns. -- Behnam Lal Moghaddam
 
 ```sql
 -- Query 1: Retrieve user information along with the total number of enrollments
@@ -1013,7 +1025,7 @@ LEFT JOIN Enrollment e ON u.user_id = e.user_id;
 
 ---
 
-## Copy one table's structure and data to a new table.
+## Copy one table's structure and data to a new table. -- Behnam Lal Moghaddam
 
 ```sql
 -- Copy structure and data from User to User_Copy
@@ -1023,7 +1035,7 @@ SELECT * FROM User;
 
 ---
 
-## Create a VIEW.
+## Create a VIEW. -- Behnam Lal Moghaddam
 
 ```sql
 -- Create a VIEW named UserSummary
@@ -1037,7 +1049,7 @@ SELECT * FROM UserSummary;
 
 ---
 
-## Create a stored procedure and call it.
+## Create a stored procedure and call it. -- Ali Daghighi
 
 ```sql
 -- For MySQL
@@ -1062,7 +1074,7 @@ CALL GetUserCount();
 
 ---
 
-## Create 3 triggers and provide examples for their execution.
+## Create 3 triggers and provide examples for their execution. -- Ali Daghighi
 
 ```sql
 -- UserAuitLog table
